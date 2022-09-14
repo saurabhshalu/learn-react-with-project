@@ -1,5 +1,15 @@
 # Getting Started with Create React App
 
+Create .env file at root directory with following details
+REACT_APP_EMAIL=
+REACT_APP_PASSWORD=
+REACT_APP_API_KEY=
+REACT_APP_AUTH_DOMAIN=
+REACT_APP_PROJECT_ID=
+REACT_APP_STORAGE_BUCKET=
+REACT_APP_SENDER_ID=
+REACT_APP_APP_ID=
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
