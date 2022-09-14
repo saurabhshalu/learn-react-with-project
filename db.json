@@ -1,0 +1,40 @@
+{
+  "blogs": [
+    {
+      "title": "json-server",
+      "description": "typicode",
+      "createdBy": "User",
+      "id": 1
+    },
+    {
+      "title": "json-server2",
+      "description": "updateed data..",
+      "createdBy": "User",
+      "id": 2
+    },
+    {
+      "title": "New Title",
+      "description": "New desc",
+      "createdBy": "User",
+      "id": 3
+    },
+    {
+      "title": "adf",
+      "description": "asdf",
+      "createdBy": "User",
+      "id": 6
+    },
+    {
+      "title": "sdafjalksd",
+      "description": "sdf",
+      "createdBy": "User",
+      "id": 8
+    },
+    {
+      "title": "sdflkjlsd",
+      "description": "asdlfjs",
+      "createdBy": "User",
+      "id": 9
+    }
+  ]
+}
