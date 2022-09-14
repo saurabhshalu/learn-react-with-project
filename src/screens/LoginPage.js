@@ -28,7 +28,7 @@ const LoginPage = () => {
       >
         <TextField
           fullWidth
-          label="Email"
+          label="Email Address"
           name="email"
           value={email}
           disabled
