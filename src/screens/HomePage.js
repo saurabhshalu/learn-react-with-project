@@ -55,7 +55,17 @@ const HomePage = () => {
   }
 
   return (
-    <div>
+    <div
+      style={{
+        display: "flex",
+        alignItems: "center",
+        flexDirection: "column",
+        border: "1px solid gray",
+        margin: 10,
+        padding: 10,
+        height: "100%",
+      }}
+    >
       <h1>List of blogs</h1>
       {loading ? (
         <CircularProgress />

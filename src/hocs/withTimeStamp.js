@@ -1,8 +1,17 @@
 const withTimeStamp = (component) => {
   return (
-    <div>
+    <div style={{ position: "relative" }}>
       {component}
-      {new Date().toISOString()}
+      <div
+        style={{
+          position: "absolute",
+          top: "calc(100% + 5px)",
+          left: "20px",
+          color: "gray",
+        }}
+      >
+        {new Date().toTimeString()}
+      </div>
     </div>
   );
 };
