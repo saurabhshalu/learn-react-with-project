@@ -1,15 +1,18 @@
 import { CircularProgress, TextField } from "@mui/material";
 import axios from "axios";
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { Navigate, useNavigate, useParams } from "react-router-dom";
 import { toast } from "react-toastify";
 import ButtonWithLoading from "../components/ButtonWithLoading";
 import { BASE_URL } from "../config";
+import { AuthContext } from "../context/AuthContext";
 import useHTTP from "../hooks/useHTTP";
 
 const EditBlog = () => {
   const params = useParams();
   const navigate = useNavigate();
+
+  const { isLoggedIn, user } = useContext(AuthContext);
 
   // const [blog, setBlog] = useState([]);
   // const [loading, setLoading] = useState(false);
@@ -80,7 +83,7 @@ const EditBlog = () => {
       const res = await axios.put(`${BASE_URL}/${params.id}`, {
         title: title,
         description: description,
-        createdBy: "User",
+        createdBy: isLoggedIn ? user.displayName : "user",
       });
       console.log(res.data);
       toast.success("Blog updated successfully.");

@@ -79,7 +79,14 @@ const Blog = () => {
   }
 
   return (
-    <div>
+    <div
+      style={{
+        border: "1px solid gray",
+        margin: 10,
+        padding: 10,
+        height: "100%",
+      }}
+    >
       <h1>{blog.title}</h1>
       <p>{blog.description}</p>
       <p>Created by: {blog.createdBy}</p>

@@ -1,11 +1,13 @@
 import { TextField } from "@mui/material";
 import axios from "axios";
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { toast } from "react-toastify";
 import ButtonWithLoading from "../components/ButtonWithLoading";
 import { BASE_URL } from "../config";
+import { AuthContext } from "../context/AuthContext";
 
 const CreateBlog = () => {
+  const { isLoggedIn, user } = useContext(AuthContext);
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
   const [titleError, setTitleError] = useState("");
@@ -45,7 +47,7 @@ const CreateBlog = () => {
       const res = await axios.post(BASE_URL, {
         title: title,
         description: description,
-        createdBy: "User",
+        createdBy: isLoggedIn ? user.displayName : "user",
       });
       console.log(res.data);
       setTitle("");
